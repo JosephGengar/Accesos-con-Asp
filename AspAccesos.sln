@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspAccesos", "AspAccesos\AspAccesos.csproj", "{68E8B056-D09C-45D4-AC68-373DDDB9052C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68E8B056-D09C-45D4-AC68-373DDDB9052C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E8B056-D09C-45D4-AC68-373DDDB9052C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E8B056-D09C-45D4-AC68-373DDDB9052C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E8B056-D09C-45D4-AC68-373DDDB9052C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C303F2FB-5F4F-4E89-9786-B6C92A13B272}
+	EndGlobalSection
+EndGlobal
