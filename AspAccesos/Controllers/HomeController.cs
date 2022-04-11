@@ -15,7 +15,7 @@ namespace AspAccesos.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Informacion Relacionado con el creador";
 
             return View();
         }
