@@ -45,8 +45,21 @@ namespace AspAccesos.Controllers
         [HttpPost]
         public ActionResult Agregar(AgregarRegistroView model)
         {
-
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            using(AccesosContext db = new AccesosContext())
+            {
+                var oUser = new TUsuarios();
+                oUser.Usuario = model.usuario;
+                oUser.Password = model.contrasena;
+                oUser.Entidad = model.entidad;
+                oUser.IdEstado = 1;
+                db.TUsuarios.Add(oUser);
+                db.SaveChanges();
+            }
+            return Redirect(Url.Content("~/Registros/Index"));
         }
     }
 }

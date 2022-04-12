@@ -17,11 +17,11 @@
             @Html.ValidationMessage("usuario", new { @class = "text-danger" })<br />   
 
             @Html.LabelFor(d => d.contrasena);
-            @Html.TextBoxFor(d => d.contrasena, new { @class = "form-control" })
+            @Html.PasswordFor(d => d.contrasena, new { @class = "form-control" })
             @Html.ValidationMessage("contraseña", new { @class = "text-danger" })<br />
 
             @Html.LabelFor(d => d.contrasenaConfirm);
-            @Html.TextBoxFor(d => d.contrasenaConfirm, new { @class = "form-control" })
+            @Html.PasswordFor(d => d.contrasenaConfirm, new { @class = "form-control" })
             @Html.ValidationMessage("contrasenaConfirm", new { @class = "text-danger" })<br />
 
             @Html.LabelFor(d => d.entidad);
