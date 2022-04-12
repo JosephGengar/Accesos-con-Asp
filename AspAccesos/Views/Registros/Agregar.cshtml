@@ -1,0 +1,37 @@
+﻿@model AspAccesos.Models.ModelHtmlView.AgregarRegistroView
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar Usuario</h2>
+
+<div class="row" style="margin-top:25px">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("Agregar", "Registros", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationMessage("Error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.usuario);
+            @Html.TextBoxFor(d => d.usuario, new { @class = "form-control" })
+            @Html.ValidationMessage("usuario", new { @class = "text-danger" })<br />   
+
+            @Html.LabelFor(d => d.contrasena);
+            @Html.TextBoxFor(d => d.contrasena, new { @class = "form-control" })
+            @Html.ValidationMessage("contraseña", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.contrasenaConfirm);
+            @Html.TextBoxFor(d => d.contrasenaConfirm, new { @class = "form-control" })
+            @Html.ValidationMessage("contrasenaConfirm", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.entidad);
+            @Html.TextBoxFor(d => d.entidad, new { @class = "form-control" })
+            @Html.ValidationMessage("entidad", new { @class = "text-danger" })<br />
+
+            <div>
+                <input type="submit" value="Enviar Datos" class="btn btn-primary"/>
+            </div>
+        }
+
+    </div>
+</div>

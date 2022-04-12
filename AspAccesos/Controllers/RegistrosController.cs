@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using AspAccesos.Models.ModelView;
 using AspAccesos.Models;
+using AspAccesos.Models.ModelHtmlView;
 
 namespace AspAccesos.Controllers
 {
@@ -35,6 +36,17 @@ namespace AspAccesos.Controllers
                 return View(lista);
             }
             return View(lista);
+        }
+        
+        public ActionResult Agregar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Agregar(AgregarRegistroView model)
+        {
+
+            return View();
         }
     }
 }
