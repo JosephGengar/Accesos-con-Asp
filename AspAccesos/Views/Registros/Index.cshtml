@@ -34,7 +34,7 @@
                     <td>@item.Entidad</td>
                     <td style="text-align:center">
                         <input type="button" value="Editar" class="btn btn-info" onclick="document.location.href='@Url.Content("~/Registros/Editar/" + item.Id)'"/> |
-                        <input type="button" value="Borrar" class="btn btn-warning"/>
+                        <input type="button" value="Borrar" class="btn btn-warning" onclick="document.location.href='@Url.Content("~/Registros/BorradoLogico/" + item.Id)'"/>
                     </td>
                 </tr>
             }

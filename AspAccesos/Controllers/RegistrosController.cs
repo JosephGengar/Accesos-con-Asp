@@ -74,5 +74,39 @@ namespace AspAccesos.Controllers
             }
             return View(modelo);
         }
+        [HttpPost]
+        public ActionResult Editar(EditarRegistroView model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            using (AccesosContext db = new AccesosContext())
+            {
+                var Ouser = db.TUsuarios.Find(model.id);
+                Ouser.Usuario = model.usuario;
+                Ouser.Entidad = model.entidad;
+                Ouser.Id = model.id;
+                if (model.password != null && model.password.Trim() != "" )
+                {
+                    Ouser.Password = model.password;
+                }
+                db.Entry(Ouser).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Redirect(Url.Content("~/Registros/Index"));
+        }
+        [HttpGet]
+        public ActionResult BorradoLogico(int Id)
+        {
+            using (AccesosContext db = new AccesosContext())
+            {
+                var oUser = db.TUsuarios.Find(Id);
+                oUser.IdEstado = 2;
+                db.Entry(oUser).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Redirect(Url.Content("~/Registros/Index"));
+        }
     }
 }

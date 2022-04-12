@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        @using (Html.BeginForm("", "", FormMethod.Post))
+        @using (Html.BeginForm("Editar", "Registros", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationMessage("Error", new { @class = "text-danger" })
