@@ -1,7 +1,40 @@
-﻿
+﻿@model List<AspAccesos.Models.ModelView.RegistersView>
 @{
     ViewBag.Title = "Index";
+    if(Model == null)
+    {
+         ViewBag.Msj = "error al recolectar datos";
+    }
 }
-
+<h2>@ViewBag.Msj</h2>
 <h2>Su Informacion</h2>
 
+<div class="row" style="margin-top:25px">
+    <div class="col-md-12">
+        <input type="button" name="agregar" value="Agregar Registro" class="btn btn-primary"/>
+    </div>
+</div><br />
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Codigo</th>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th>Entidad</th>
+                <th>Acciones</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Usuario</td>
+                    <td>@item.Password</td>
+                    <td>@item.Entidad</td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
