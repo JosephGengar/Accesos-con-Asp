@@ -32,7 +32,10 @@
                     <td>@item.Usuario</td>
                     <td>@item.Password</td>
                     <td>@item.Entidad</td>
-                    <td></td>
+                    <td style="text-align:center">
+                        <input type="button" value="Editar" class="btn btn-info" onclick="document.location.href='@Url.Content("~/Registros/Editar/" + item.Id)'"/> |
+                        <input type="button" value="Borrar" class="btn btn-warning"/>
+                    </td>
                 </tr>
             }
         </table>

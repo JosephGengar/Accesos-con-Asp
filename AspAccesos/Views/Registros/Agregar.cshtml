@@ -29,7 +29,8 @@
             @Html.ValidationMessage("entidad", new { @class = "text-danger" })<br />
 
             <div>
-                <input type="submit" value="Enviar Datos" class="btn btn-primary"/>
+                <input type="submit" value="Enviar Datos" class="btn btn-primary" />
+                 <input type="button" value="Cancelar" class="btn btn-success" onclick="document.location.href = '@Url.Content("~/Registros/Index")'" />
             </div>
         }
 

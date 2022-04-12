@@ -61,5 +61,18 @@ namespace AspAccesos.Controllers
             }
             return Redirect(Url.Content("~/Registros/Index"));
         }
+        [HttpGet]
+        public ActionResult Editar(int id)
+        {
+            EditarRegistroView modelo = new EditarRegistroView();
+            using (AccesosContext db = new AccesosContext())
+            {         
+                var Ouser = db.TUsuarios.Find(id);
+                modelo.id = Ouser.Id;
+                modelo.usuario = Ouser.Usuario;
+                modelo.entidad = Ouser.Entidad;
+            }
+            return View(modelo);
+        }
     }
 }

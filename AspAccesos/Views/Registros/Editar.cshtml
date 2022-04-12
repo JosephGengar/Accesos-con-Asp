@@ -1,0 +1,39 @@
+﻿@model AspAccesos.Models.ModelHtmlView.EditarRegistroView
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar Registro</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("", "", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationMessage("Error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.usuario)
+            @Html.TextBoxFor(d => d.usuario, new { @class = "form-control" })
+            @Html.ValidationMessage("usuario", new { @class = "text-danger" })<br />  
+
+            @Html.LabelFor(d => d.password)
+            @Html.TextBoxFor(d => d.password, new { @class = "form-control" })
+            @Html.ValidationMessage("password", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(d => d.passwordConf)
+            @Html.TextBoxFor(d => d.passwordConf, new { @class = "form-control" })
+            @Html.ValidationMessage("passwordConf", new { @class = "text-danger" })<br />
+            
+            @Html.LabelFor(d => d.entidad)
+            @Html.TextBoxFor(d => d.entidad, new { @class = "form-control" })
+            @Html.ValidationMessage("entidad", new { @class = "text-danger" })<br />
+
+            <div>
+                <input type="submit" value="Subir Cambios" class="btn btn-primary" />
+                <input type="button" value="Cancelar" class="btn btn-success" onclick="document.location.href = '@Url.Content("~/Registros/Index")'"/>
+            </div>
+
+        }
+    </div>
+</div>
