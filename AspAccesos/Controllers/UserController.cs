@@ -26,7 +26,7 @@ namespace AspAccesos.Controllers
                                select d);
                     if (lst.Count() > 0)
                     {
-                        Session["user"] = lst.FirstOrDefault();
+                        Session["user"] = lst.First();
                         return Content("1");
                     }
                     else

@@ -2,9 +2,9 @@
 @{
     ViewBag.Title = "Index";
 }
-<div style="text-align:center">
-    <h2>Iniciar Sesion</h2>
-
+<div style="text-align:center; padding: 20px 5px 20px 5px;">
+    <h2><strong>Iniciar Sesion</strong></h2><br />
+    <p>Debes Iniciar una Sesion para poder acceder a la informacion personal</p><br />
     <p>Puedes colocar cualquier usuario y contraseña que recuerdes.</p><br />
 
     <div class="row">
@@ -17,7 +17,7 @@
                 <div class="col-lg-12">
                     <label>Contraseña: </label>
                     <input type="password" name="password" id="c2" />
-                </div><br /><br />
+                </div><br /><br /><br />
                 <div class="col-lg-12">
                     <button type="submit" class="btn btn-primary">Iniciar</button>
                     <button type="button" class="btn btn-default" id="btnSalir">Cancelar</button>
@@ -38,7 +38,7 @@
                 $.post(url, datos, function (data) {
                     if (data == 1) {
                         alert("Inicio de Sesion Exitoso!!");
-                        document.location.href = "@Url.Content("~/Home/Index")";
+                        document.location.href = "@Url.Content("~/Registros/Index")";                    
                     }
                     else {
                         alert(data);
