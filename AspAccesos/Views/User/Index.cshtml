@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div style="text-align:center">
+    <h2>Iniciar Sesion</h2>
+
+    <p>Puedes colocar cualquier usuario y contraseña que recuerdes.</p><br />
+
+    <div class="row">
+        <div>
+            <form id="frm" style="width:100%">
+                <div class="col-lg-12">
+                    <label>Usuario:</label>
+                    <input type="text" name="usuario" style="margin-left:20px" id="c1"/>
+                </div><br /><br />
+                <div class="col-lg-12">
+                    <label>Contraseña: </label>
+                    <input type="password" name="password" id="c2" />
+                </div><br /><br />
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary">Iniciar</button>
+                    <button type="button" class="btn btn-default" id="btnSalir">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btnLimpiar">Limpiar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#frm").submit(function (e) {
+                e.preventDefault();
+                var url = "@Url.Content("~/User/Login")";
+                var datos = $(this).serialize();
+                $.post(url, datos, function (data) {
+                    if (data == 1) {
+                        alert("Inicio de Sesion Exitoso!!");
+                        document.location.href = "@Url.Content("~/Home/Index")";
+                    }
+                    else {
+                        alert(data);
+                        $("#c1, #c2").val("");
+                    }
+                })
+            })
+            $("#btnLimpiar").click(function (e) {
+                e.preventDefault();
+                $("#c1, #c2").val("");
+            })
+            $("#btnSalir").click(function (e) {
+                e.preventDefault();
+                document.location.href = "@Url.Content("~/Home/Index")";
+            })
+        })
+    </script>
+    }
