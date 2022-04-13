@@ -14,13 +14,13 @@ rutas, pero para entrar a la seccion de informacion personal, tenemos que estar 
 que no permiten el acceso y ademas esos filtros se ocupan de que una vez logueado el usuario, no pueda volver a acceder a la ruta de
 inicio de sesion.
 
-Seccion Acerca del Creador:
+Acerca del Creador:
 
 ![Acess2](https://user-images.githubusercontent.com/102115164/163073968-e5f50bb9-3749-4c21-a4bf-a3ed30f2c199.png)
 
 Esta es una seccion publica de la pagina la cual no necesita inicio de sesion.
 
-Loguin:
+Inicio de Sesion:
 
 ![Acess3](https://user-images.githubusercontent.com/102115164/163074445-68e8f232-dbd9-4785-8ae4-4f0d7624b1fc.png)
 
