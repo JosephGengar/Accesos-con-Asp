@@ -9,7 +9,7 @@ Pagina de Inicio:
 
 ![Acess1](https://user-images.githubusercontent.com/102115164/163073522-70bf3db6-1260-4ad5-a37b-9706e53fa202.png)
 
-El inicio cuenta con un boton de acceso a una ruta para iniciar las sesion, podemos movernos atraves de la barra navegadora a otras
+El inicio cuenta con un boton de acceso a una ruta para iniciar las sesion, podemos movernos a traves de la barra navegadora a otras
 rutas, pero para entrar a la seccion de informacion personal, tenemos que estar si o si logueados, dado que la pagina contiene Filtros
 que no permiten el acceso y ademas esos filtros se ocupan de que una vez logueado el usuario, no pueda volver a acceder a la ruta de
 inicio de sesion.
@@ -24,7 +24,7 @@ Inicio de Sesion:
 
 ![Acess3](https://user-images.githubusercontent.com/102115164/163074445-68e8f232-dbd9-4785-8ae4-4f0d7624b1fc.png)
 
-Dicho Anteriormente para acceder a la parte de informacion personal se deber esta logueado, se permite cualquier usuario y contraseña
+Dicho Anteriormente para acceder a la parte de informacion personal se deber estar logueado, se permite cualquier usuario y contraseña
 que se recuerde. Una vez hecho el inicio de sesion, nos direcciona directamente a la ruta de informacion personal.
 
 Informacion Personal / Registros:
