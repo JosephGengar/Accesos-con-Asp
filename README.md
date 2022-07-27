@@ -39,7 +39,7 @@ cualquier item de los registros y por supuesto se pueden agregar mas Registros a
 ![Acess6](https://user-images.githubusercontent.com/102115164/163074865-49df391b-d484-4e4e-ab5b-85c5fb50ced8.png)
 
 
-Tecnologias Utilizadas: Asp.Net, Entity Framework, C#, Sql Server, Jquery, Bootstrap, entre otros.
+Tecnologias Utilizadas: Asp.Net, Entity Framework, C#, SqlServer, Jquery, Bootstrap, entre otros.
 
 
 
